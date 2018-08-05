@@ -35,14 +35,15 @@ const orm = {
     });
   },
   
-  updateOne: function(table, condition, cb) {
+  updateOne: function(table, objColVals, condition, cb) {
+    
     let queryString = "UPDATE " + table;
 
-    queryString += " SET ";
+    queryString += " SET devoured=";
     queryString += true;
     queryString += " WHERE ";
-    
-    queryString += condition;
+    queryString += JSON.parse(JSON.stringify(condition));
+    queryString += ";";
     
 
     console.log(queryString);
