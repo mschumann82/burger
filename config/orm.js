@@ -15,18 +15,11 @@ const orm = {
     });
   },
   insertOne: function(table, cols, vals, cb) {
-    let queryString = "INSERT INTO " + table;
+    let queryString = "INSERT INTO " + table + " (burger_name, devoured) VALUES (" + "'" + vals[0] + "', " + vals[1] + ");";
 
-    queryString += " (";
-    queryString += cols.toString();
-    queryString += ") ";
-    queryString += "VALUES (";
-    queryString += printQuestionMarks(vals.length);
-    queryString += ") ";
+        console.log(queryString);
 
-    console.log(queryString);
-
-    connection.query(queryString, vals, function(err, result) {
+    connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
       }
