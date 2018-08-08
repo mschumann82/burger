@@ -1,7 +1,16 @@
+body {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDcsiBxykyMwAO6IF0BERU1a2Zlf4MVu5OjJuhgqfwxbD24aQo");
+  color: #931009;
+}
+
+h1, h2, label {
+  background: #b6b30f;
+}
+
 li {
   padding: 5px;
   margin: 5px;
-  background: #faebd7;
+  background: #b6b30f;
 }
 
 .label {
@@ -17,3 +26,19 @@ li {
 .form-group {
   margin-bottom: 5px;
 }
+
+.left {
+  float: left;
+  margin-left: 10%;
+}
+
+.right {
+  float: right;
+  margin-right: 10%;
+}
+
+
+#title {
+  text-align: center;
+}
+
